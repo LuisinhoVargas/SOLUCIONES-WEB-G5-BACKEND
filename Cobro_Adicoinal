@@ -1,0 +1,72 @@
+package entidades;
+
+public class CobroAdicional {
+
+    private int idCobroAdicional;
+    private double monto;
+    private String motivo;
+    private String fecha;
+    private boolean estaPendiente;
+
+    public CobroAdicional() {
+    }
+
+    public CobroAdicional(int idCobroAdicional, double monto, String motivo, String fecha, boolean estaPendiente) {
+        this.idCobroAdicional = idCobroAdicional;
+        this.monto = monto;
+        this.motivo = motivo;
+        this.fecha = fecha;
+        this.estaPendiente = estaPendiente;
+    }
+
+    public int getIdCobroAdicional() {
+        return idCobroAdicional;
+    }
+
+    public void setIdCobroAdicional(int idCobroAdicional) {
+        this.idCobroAdicional = idCobroAdicional;
+    }
+
+    public double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public boolean isEstaPendiente() {
+        return estaPendiente;
+    }
+
+    public void setEstaPendiente(boolean estaPendiente) {
+        this.estaPendiente = estaPendiente;
+    }
+
+    @Override
+    public String toString() {
+        return "CobroAdicional{" +
+                "idCobroAdicional=" + idCobroAdicional +
+                ", monto=" + monto +
+                ", motivo='" + motivo + '\'' +
+                ", fecha='" + fecha + '\'' +
+                ", estaPendiente=" + estaPendiente +
+                '}';
+    }
+}
