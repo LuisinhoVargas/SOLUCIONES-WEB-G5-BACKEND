@@ -1,0 +1,38 @@
+package entidades;
+
+public class EstadoProducto {
+
+    private int idEstadoProducto;
+    private String nombreEstadoProducto;
+    public EstadoProducto() {
+    }
+
+    public EstadoProducto(int idEstadoProducto, String nombreEstadoProducto) {
+        this.idEstadoProducto = idEstadoProducto;
+        this.nombreEstadoProducto = nombreEstadoProducto;
+    }
+
+    public int getIdEstadoProducto() {
+        return idEstadoProducto;
+    }
+
+    public void setIdEstadoProducto(int idEstadoProducto) {
+        this.idEstadoProducto = idEstadoProducto;
+    }
+
+    public String getNombreEstadoProducto() {
+        return nombreEstadoProducto;
+    }
+
+    public void setNombreEstadoProducto(String nombreEstadoProducto) {
+        this.nombreEstadoProducto = nombreEstadoProducto;
+    }
+
+    @Override
+    public String toString() {
+        return "EstadoProducto{" +
+                "idEstadoProducto=" + idEstadoProducto +
+                ", nombreEstadoProducto='" + nombreEstadoProducto + '\'' +
+                '}';
+    }
+}
