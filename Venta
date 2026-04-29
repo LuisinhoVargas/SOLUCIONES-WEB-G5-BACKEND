@@ -1,0 +1,72 @@
+package entidades;
+
+public class Venta {
+
+    private int idVenta;
+    private String fecha;
+    private double descuento;
+    private double total;
+    private boolean estaRealizado;
+
+    public Venta() {
+    }
+
+    public Venta(int idVenta, String fecha, double descuento, double total, boolean estaRealizado) {
+        this.idVenta = idVenta;
+        this.fecha = fecha;
+        this.descuento = descuento;
+        this.total = total;
+        this.estaRealizado = estaRealizado;
+    }
+
+    public int getIdVenta() {
+        return idVenta;
+    }
+
+    public void setIdVenta(int idVenta) {
+        this.idVenta = idVenta;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public boolean isEstaRealizado() {
+        return estaRealizado;
+    }
+
+    public void setEstaRealizado(boolean estaRealizado) {
+        this.estaRealizado = estaRealizado;
+    }
+
+    @Override
+    public String toString() {
+        return "Venta{" +
+                "idVenta=" + idVenta +
+                ", fecha='" + fecha + '\'' +
+                ", descuento=" + descuento +
+                ", total=" + total +
+                ", estaRealizado=" + estaRealizado +
+                '}';
+    }
+}
