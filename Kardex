@@ -1,0 +1,39 @@
+package com.magichouse.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+import java.time.LocalDateTime;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class Kardex {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
+    private Long idKardex;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_item_disfraz", nullable = false, foreignKey = @ForeignKey(name = "FK_KARDEX_ITEMDISFRAZ"))
+    private ItemDisfraz itemDisfraz;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", nullable = false, foreignKey = @ForeignKey(name = "FK_KARDEX_USUARIO"))
+    private Usuario usuario;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_tipo_movimiento", nullable = false, foreignKey = @ForeignKey(name = "FK_KARDEX_TIPOMOVIMIENTO"))
+    private TipoMovimiento tipoMovimiento;
+    
+    @Column(nullable = false, length = 100)
+    private String idTransaccionRef;
+    
+    @Column(nullable = false)
+    private LocalDateTime fechaMovimiento;
+    
+    @Column(nullable = false)
+    private Boolean estaActivo;
+}
